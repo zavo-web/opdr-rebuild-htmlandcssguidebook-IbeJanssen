@@ -7,141 +7,71 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Overslaan naar inhoud</a>
-
     <header class="site-header">
       <div class="container header-inner">
-        <div class="brand">
-          <img src="./img/site-logo.svg" alt="HTML & CSS Guidebook logo" width="40" height="40" />
-          <div class="site-title">
-            <h1>HTML &amp; CSS Guidebook</h1>
-            <p class="author">door A. Auteur</p>
-          </div>
-        </div>
-
-        <nav class="main-nav" aria-label="Hoofd navigatie">
+        <a class="site-brand" href="#home">
+          <img src="./img/site-logo.svg" alt="Logo" width="45" height="45" />
+          <span class="site-title">HTML & CSS Guidebook</span>
+        </a>
+        <nav class="main-nav">
           <ul>
             <li><a href="#html-reference">HTML Reference</a></li>
             <li><a href="#css-reference">CSS Reference</a></li>
-            <li><a href="#advanced">Advanced / Other Reference</a></li>
+            <li><a href="#advanced">Advanced</a></li>
             <li><a href="#resources">Resources</a></li>
           </ul>
         </nav>
-
-        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
       </div>
     </header>
 
-    <main id="main">
+    <main id="home">
       <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <h2>A free interactive guide to front-end web development for absolute beginners.</h2>
-            <p>Leer HTML en CSS stap voor stap met duidelijke voorbeelden en interactieve oefeningen.</p>
-            <p class="hero-cta">
-              <a class="btn" href="#table-of-contents">Bekijk de inhoud</a>
-              <a class="btn btn-outline" href="#html-reference">Start met HTML</a>
-            </p>
-          </div>
-          <div class="hero-illustration" aria-hidden="true">
-            <!-- eenvoudige decoratieve illustratie als CSS-achtergrond of SVG -->
-            <svg width="240" height="160" viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <rect x="0" y="0" width="240" height="160" fill="var(--color-surface)" rx="8" />
-              <text x="20" y="40" font-size="16" fill="var(--color-muted)">HTML</text>
-              <text x="20" y="80" font-size="16" fill="var(--color-muted)">CSS</text>
-            </svg>
-          </div>
+        <div class="container">
+          <h1>A free interactive guide to front‑end web development for absolute beginners.</h1>
+          <p class="lead">Leer HTML en CSS stap voor stap, met voorbeelden en referenties.</p>
+          <a class="btn" href="#table-of-contents">Bekijk inhoud</a>
         </div>
       </section>
 
       <section id="table-of-contents" class="toc">
         <div class="container">
-          <header class="toc-header">
-            <h2>Table of Contents</h2>
-            <form class="toc-search" role="search" aria-label="Zoek in inhoudsopgave">
-              <label for="toc-search-input" class="visually-hidden">Zoek</label>
-              <input id="toc-search-input" type="search" placeholder="Zoek in de inhoud..." />
-              <button type="submit" aria-label="Zoek">🔍</button>
-            </form>
-          </header>
+          <h2>Table of Contents</h2>
+          <input class="search" type="search" placeholder="Zoek..." />
 
           <div class="toc-grid">
-            <aside class="toc-list" aria-labelledby="toc-list-title">
-              <h3 id="toc-list-title">Hoofdstukken</h3>
-              <ul>
-                <li>
-                  <a href="#introduction">Introductions</a>
-                  <ul>
-                    <li><a href="#intro-html">HTML Introduction</a></li>
-                    <li><a href="#intro-css">CSS Introduction</a></li>
-                  </ul>
-                </li>
-                <li><a href="#html-reference">HTML Reference</a></li>
-                <li><a href="#css-reference">CSS Reference</a></li>
-                <li><a href="#advanced">Advanced / Other Reference</a></li>
-                <li><a href="#resources">Resources</a></li>
-              </ul>
-            </aside>
+            <article class="toc-card">
+              <h3>Introductions</h3>
+              <p>Basis van HTML en documentstructuur.</p>
+            </article>
 
-            <section class="toc-cards" aria-labelledby="toc-cards-title">
-              <h3 id="toc-cards-title" class="visually-hidden">Overzicht kaarten</h3>
+            <article class="toc-card">
+              <h3>HTML Reference</h3>
+              <p>Complete lijst met HTML‑elementen.</p>
+            </article>
 
-              <!-- Card 1 -->
-              <article class="card">
-                <h4><a href="#intro-html">HTML Introduction</a></h4>
-                <p>Basisconcepten van HTML: elementen, attributen, structuur en semantiek.</p>
-              </article>
+            <article class="toc-card">
+              <h3>CSS Reference</h3>
+              <p>Eigenschappen en selectors.</p>
+            </article>
 
-              <!-- Card 2 -->
-              <article class="card">
-                <h4><a href="#intro-css">CSS Introduction</a></h4>
-                <p>Stijlen toepassen met selectors, box model, layout en responsive technieken.</p>
-              </article>
+            <article class="toc-card">
+              <h3>Advanced</h3>
+              <p>Accessibility en best practices.</p>
+            </article>
 
-              <!-- Card 3 -->
-              <article class="card">
-                <h4><a href="#forms">Forms &amp; Accessibility</a></h4>
-                <p>Toegankelijke formulieren, labels, ARIA en keyboard-navigatie.</p>
-              </article>
-
-              <!-- Card 4 -->
-              <article class="card">
-                <h4><a href="#advanced">Advanced topics</a></h4>
-                <p>Progressive enhancement, performance, en CSS advanced technieken.</p>
-              </article>
-
-            </section>
+            <article class="toc-card">
+              <h3>Resources</h3>
+              <p>Handige links en tools.</p>
+            </article>
           </div>
         </div>
       </section>
-
-      <section id="html-reference" class="reference">
-        <div class="container">
-          <h2>HTML Reference</h2>
-          <p>Korte introductie en links naar elementpagina's (dummy links).</p>
-        </div>
-      </section>
-
-      <section id="css-reference" class="reference">
-        <div class="container">
-          <h2>CSS Reference</h2>
-          <p>Korte introductie en links naar property- en selectorpagina's (dummy links).</p>
-        </div>
-      </section>
-
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>&copy; 2025 — HTML &amp; CSS Guidebook — gemaakt door A. Auteur</p>
-        <nav aria-label="Footer links">
-          <ul>
-            <li><a href="#privacy">Privacy</a></li>
-            <li><a href="#license">License</a></li>
-          </ul>
-        </nav>
+      <div class="container">
+        <p>© 2025 — Ibe Janssen 6APP.</p>
       </div>
     </footer>
-
   </body>
 </html>
