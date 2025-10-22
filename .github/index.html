@@ -1,77 +1,460 @@
 <!doctype html>
 <html lang="nl-BE">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HTML & CSS Guidebook — Rebuild</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="site-brand" href="#home">
-          <img src="./img/site-logo.svg" alt="Logo" width="45" height="45" />
-          <span class="site-title">HTML & CSS Guidebook</span>
-        </a>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#html-reference">HTML Reference</a></li>
-            <li><a href="#css-reference">CSS Reference</a></li>
-            <li><a href="#advanced">Advanced</a></li>
-            <li><a href="#resources">Resources</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML & CSS Guidebook — Rebuild</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+ 
+  <header class="site-header">
+    <div class="container">
+      <div class="site-branding">
+        <h1 class="site-title">
+          <a href="#home">HTML &amp; CSS Guidebook</a>
+        </h1>
+        <span class="site-author">by Ibe Janssen</span>
       </div>
-    </header>
-
-    <main id="home">
-      <section class="hero">
-        <div class="container">
-          <h1>A free interactive guide to front‑end web development for absolute beginners.</h1>
-          <p class="lead">Leer HTML en CSS stap voor stap, met voorbeelden en referenties.</p>
-          <a class="btn" href="#table-of-contents">Bekijk inhoud</a>
-        </div>
-      </section>
-
-      <section id="table-of-contents" class="toc">
-        <div class="container">
+      
+      <nav class="main-nav" aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="#html-reference">HTML Reference</a></li>
+          <li><a href="#css-reference">CSS Reference</a></li>
+          <li><a href="#advanced">Advanced / Other Reference Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+ 
+  <section class="hero">
+    <div class="container">
+      <p>A free interactive guide to front-end web development for absolute beginners.</p>
+    </div>
+  </section>
+  
+  
+  <main class="main-content">
+    
+    <section class="toc-section">
+      <div class="container">
+        <header class="section-header">
           <h2>Table of Contents</h2>
-          <input class="search" type="search" placeholder="Zoek..." />
-
-          <div class="toc-grid">
-            <article class="toc-card">
-              <h3>Introductions</h3>
-              <p>Basis van HTML en documentstructuur.</p>
-            </article>
-
-            <article class="toc-card">
-              <h3>HTML Reference</h3>
-              <p>Complete lijst met HTML‑elementen.</p>
-            </article>
-
-            <article class="toc-card">
-              <h3>CSS Reference</h3>
-              <p>Eigenschappen en selectors.</p>
-            </article>
-
-            <article class="toc-card">
-              <h3>Advanced</h3>
-              <p>Accessibility en best practices.</p>
-            </article>
-
-            <article class="toc-card">
-              <h3>Resources</h3>
-              <p>Handige links en tools.</p>
-            </article>
+        </header>
+        
+        <div class="search-wrapper">
+          <div class="search-box" role="search">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input 
+              type="search" 
+              placeholder="Search the Chapters" 
+              aria-label="Zoek hoofdstukken"
+            >
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 — Ibe Janssen 6APP.</p>
+        
+        
+        <h3 class="subsection-title">Introductions</h3>
+        
+        <div class="content-grid">
+          <article class="content-item">
+            <div class="item-number">01</div>
+            <h3 class="item-title">
+              <a href="#what-is-website">What is a website?</a>
+            </h3>
+            <p class="item-description">How are websites built and what are they made of?</p>
+          </article>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+    
+   
+    <section class="category-section" id="html-reference">
+      <div class="container">
+        <h2 class="category-title">HTML: Content and Structure</h2>
+        
+        <div class="content-grid">
+          <article class="content-item">
+            <div class="item-number">02</div>
+            <h3 class="item-title">
+              <a href="#html-intro">HTML Introduction</a>
+            </h3>
+            <p class="item-description">What is HTML? What are the rules of the language?</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">03</div>
+            <h3 class="item-title">
+              <a href="#file-structure">File Structure</a>
+            </h3>
+            <p class="item-description">How to structure the folders and files of a website project</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">04</div>
+            <h3 class="item-title">
+              <a href="#skeleton-code">Skeleton Code</a>
+            </h3>
+            <p class="item-description">The code that should be included in every HTML document</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">05</div>
+            <h3 class="item-title">
+              <a href="#text-elements">Basic HTML Text Elements</a>
+            </h3>
+            <p class="item-description">The most common elements for structuring text content</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">06</div>
+            <h3 class="item-title">
+              <a href="#links">Links</a>
+            </h3>
+            <p class="item-description">The most fundamental type of interactivity in HTML</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">07</div>
+            <h3 class="item-title">
+              <a href="#ids-classes">IDs &amp; Classes</a>
+            </h3>
+            <p class="item-description">Attributes for giving names to elements</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">08</div>
+            <h3 class="item-title">
+              <a href="#semantic-elements">Semantic Elements</a>
+            </h3>
+            <p class="item-description">A set of elements aimed at adding meaning to the parts of a web page</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">09</div>
+            <h3 class="item-title">
+              <a href="#divs-spans">Divs &amp; Spans</a>
+            </h3>
+            <p class="item-description">Meaningless elements</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">10</div>
+            <h3 class="item-title">
+              <a href="#images">Images</a>
+            </h3>
+            <p class="item-description">Image formats, the HTML image element, and inline SVG</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">11</div>
+            <h3 class="item-title">
+              <a href="#forms">Forms</a>
+            </h3>
+            <p class="item-description">How to accept input or information from users</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">12</div>
+            <h3 class="item-title">
+              <a href="#interactive-elements">Interactive Elements</a>
+            </h3>
+            <p class="item-description">Elements with built-in interactive open-and-close behaviors</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+   
+    <section class="category-section" id="css-reference">
+      <div class="container">
+        <h2 class="category-title">CSS: Style and Layout</h2>
+        
+        <div class="content-grid">
+          <article class="content-item">
+            <div class="item-number">13</div>
+            <h3 class="item-title">
+              <a href="#intro-css">Introduction to CSS</a>
+            </h3>
+            <p class="item-description">What is the purpose of CSS? How does it work to style HTML?</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">14</div>
+            <h3 class="item-title">
+              <a href="#css-selectors">CSS Selectors</a>
+            </h3>
+            <p class="item-description">Different ways CSS can select HTML elements to style</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">15</div>
+            <h3 class="item-title">
+              <a href="#size-units">Common Size Units</a>
+            </h3>
+            <p class="item-description">Different ways to apply measurements in CSS</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">16</div>
+            <h3 class="item-title">
+              <a href="#color-definitions">CSS Color Definitions</a>
+            </h3>
+            <p class="item-description">Several common ways to specify a color in CSS</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">17</div>
+            <h3 class="item-title">
+              <a href="#typography">Typographic Properties</a>
+            </h3>
+            <p class="item-description">A wide variety of ways to customize and control the appearance of text</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">18</div>
+            <h3 class="item-title">
+              <a href="#styling-lists">Styling Lists</a>
+            </h3>
+            <p class="item-description">How to control the bullets, numbers, and spacing associated with list items</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">19</div>
+            <h3 class="item-title">
+              <a href="#box-model">The Box Model</a>
+            </h3>
+            <p class="item-description">How block elements are sized and spaced in CSS</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">20</div>
+            <h3 class="item-title">
+              <a href="#link-states">Link States</a>
+            </h3>
+            <p class="item-description">Different states of link interaction and how to style them</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">21</div>
+            <h3 class="item-title">
+              <a href="#float-clear">Float &amp; Clear</a>
+            </h3>
+            <p class="item-description">How to wrap text around an image or another element</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">22</div>
+            <h3 class="item-title">
+              <a href="#backgrounds">Background Colors &amp; Images</a>
+            </h3>
+            <p class="item-description">How to control the appearance of the area behind a page or element</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">23</div>
+            <h3 class="item-title">
+              <a href="#special-effects">Special Effects</a>
+            </h3>
+            <p class="item-description">How to apply unique styles such as shadows and rounded corners</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">24</div>
+            <h3 class="item-title">
+              <a href="#fluid-width">Fluid Width</a>
+            </h3>
+            <p class="item-description">How to make elements stretch or squish depending to fit the space available</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">25</div>
+            <h3 class="item-title">
+              <a href="#responsive-design">Responsive Design</a>
+            </h3>
+            <p class="item-description">Using media queries to adapt a page to different screen sizes</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">26</div>
+            <h3 class="item-title">
+              <a href="#display-property">The Display Property</a>
+            </h3>
+            <p class="item-description">How to control the basic layout behavior of an element</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">27</div>
+            <h3 class="item-title">
+              <a href="#web-fonts">Web Fonts</a>
+            </h3>
+            <p class="item-description">Custom typefaces for web pages</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">28</div>
+            <h3 class="item-title">
+              <a href="#position-property">The Position Property</a>
+            </h3>
+            <p class="item-description">For when you want full manual control of the placement of an element</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">29</div>
+            <h3 class="item-title">
+              <a href="#transitions-animation">CSS Transitions &amp; Animation</a>
+            </h3>
+            <p class="item-description">For adding motion to web pages</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">30</div>
+            <h3 class="item-title">
+              <a href="#transform">Transform</a>
+            </h3>
+            <p class="item-description">For scaling, rotating, skewing, or moving an element</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">31</div>
+            <h3 class="item-title">
+              <a href="#flexbox">Flexbox</a>
+            </h3>
+            <p class="item-description">For laying out items across a single dimension</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">32</div>
+            <h3 class="item-title">
+              <a href="#grid">Grid</a>
+            </h3>
+            <p class="item-description">For laying out items in a two-dimensional grid</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">33</div>
+            <h3 class="item-title">
+              <a href="#advanced-typography">Advanced Typographic CSS</a>
+            </h3>
+            <p class="item-description">Techniques for creating cohesive and responsive typography</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">34</div>
+            <h3 class="item-title">
+              <a href="#variables">Variables</a>
+            </h3>
+            <p class="item-description">For creating reusable CSS values</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">35</div>
+            <h3 class="item-title">
+              <a href="#generated-content">CSS-Generated Content</a>
+            </h3>
+            <p class="item-description">Insert visual content with CSS</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="category-section" id="advanced">
+      <div class="container">
+        <h2 class="category-title">Advanced / Other</h2>
+        
+        <div class="content-grid">
+          <article class="content-item">
+            <div class="item-number">36</div>
+            <h3 class="item-title">
+              <a href="#responsive-nav">Styling a Responsive Nav</a>
+            </h3>
+            <p class="item-description">A simple example of responsive design for site navigation</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">37</div>
+            <h3 class="item-title">
+              <a href="#favicons">Site Icons (Favicons)</a>
+            </h3>
+            <p class="item-description">An icon for the browser tab and elsewhere</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">38</div>
+            <h3 class="item-title">
+              <a href="#git-github">Git / Github</a>
+            </h3>
+            <p class="item-description">Version control to keep track of changes</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">39</div>
+            <h3 class="item-title">
+              <a href="#going-beyond">Going Beyond</a>
+            </h3>
+            <p class="item-description">Want to know more about front-end coding?</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="category-section">
+      <div class="container">
+        <h2 class="category-title">Reference Resources</h2>
+        
+        <div class="content-grid">
+          <article class="content-item">
+            <div class="item-number">40</div>
+            <h3 class="item-title">
+              <a href="#challenges">Practical Challenges</a>
+            </h3>
+            <p class="item-description">A series of step-by-step challenges to practice what you've learned by creating a realistic website</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">41</div>
+            <h3 class="item-title">
+              <a href="#code-style">Code Style Guide</a>
+            </h3>
+            <p class="item-description">A guide for formatting and other best practices for writing your code</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">42</div>
+            <h3 class="item-title">
+              <a href="#glossary">Glossary</a>
+            </h3>
+            <p class="item-description">Some of the most common HTML &amp; CSS terms and their meanings</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">43</div>
+            <h3 class="item-title">
+              <a href="#checklist">Website Project Checklist</a>
+            </h3>
+            <p class="item-description">Make sure you have considered these items before completing a website project</p>
+          </article>
+          
+          <article class="content-item">
+            <div class="item-number">44</div>
+            <h3 class="item-title">
+              <a href="#reference-index">Reference Index</a>
+            </h3>
+            <p class="item-description">An index of all HTML elements, HTML attributes, and CSS properties discussed on this site</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 HTML ; CSS Guidebook..</p>
+    </div>
+  </footer>
+</body>
 </html>
